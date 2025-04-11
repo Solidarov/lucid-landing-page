@@ -1,0 +1,18 @@
+{
+  "name": "lucid-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "swiper": "^11.2.6"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
