@@ -1,12 +1,13 @@
 $primary: #008DD5;
-$secondary: #16151B;
+$secondary: #89888D;
+$dark: #16151B;
 $font-family-base: "Source Sans Pro", sans-serif;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
-  background-color: var(--bs-secondary);
+  background-color: $dark;
 }
 
 .banner_section {
@@ -27,3 +28,58 @@ body {
     opacity: 0.2;
     z-index: -1;
   }
+
+.nav-item a {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item a span {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 45%;
+  height: 3px;
+  background-color: $primary;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-item a span:nth-child(2) {
+  left: 50%; // Position the second span slightly lower
+}
+
+.nav-item:hover a span,
+.collapse.show .nav-item:active a span {
+  transform: scaleX(1);
+}
+
+.nav-item .nav-link.active span {
+  transform: scaleX(1);
+}
+
+.lucid-logo {
+  display: flex;
+}
+
+.lucid-text {
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px; // Відступ між LUCID і підписами
+}
+
+.lucid-subtext {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.lucid-onepage,
+.lucid-theme {
+  font-size: 65%; // Половина розміру LUCID
+  text-transform: uppercase;
+}
+.lucid-theme,
+.lucid-onepage {
+  margin-bottom: 0; // Відступ між Onepage і Theme
+  margin-top: 0;
+}
