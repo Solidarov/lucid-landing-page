@@ -6,29 +6,35 @@ $font-family-base: "Source Sans Pro", sans-serif;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-body {
-  background-color: $dark;
+/*=====Logo section=====*/
+.lucid-logo {
+  display: flex;
 }
 
-.banner_section {
-    position: relative;
-    z-index: 1;
-  }
+.lucid-text {
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px; // Відступ між LUCID і підписами
+}
 
-  .banner_section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/background_transparent.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1;
-  }
+.lucid-subtext {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
 
+.lucid-onepage,
+.lucid-theme {
+  font-size: 65%; // Половина розміру LUCID
+  text-transform: uppercase;
+}
+.lucid-theme,
+.lucid-onepage {
+  margin-bottom: 0; // Відступ між Onepage і Theme
+  margin-top: 0;
+}
+
+/*=====Menu section=====*/
 .nav-item a {
   position: relative;
   display: inline-block;
@@ -57,29 +63,38 @@ body {
   transform: scaleX(1);
 }
 
-.lucid-logo {
-  display: flex;
-}
 
-.lucid-text {
-  font-weight: bold;
-  line-height: 1;
-  margin-right: 3px; // Відступ між LUCID і підписами
-}
+/*=====Baner section=====*/
+.banner_section {
+    position: relative;
+    z-index: 1;
+    background-color: $dark;
+  }
 
-.lucid-subtext {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
+  .banner_section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/background_transparent.png');
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
 
-.lucid-onepage,
-.lucid-theme {
-  font-size: 65%; // Половина розміру LUCID
-  text-transform: uppercase;
+
+
+@media (max-width: 992px) {
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
-.lucid-theme,
-.lucid-onepage {
-  margin-bottom: 0; // Відступ між Onepage і Theme
-  margin-top: 0;
+@media (min-width: 992px) {
+  .text-container {
+    width: 75%; /* Adjust the width as needed */
+  }
 }
