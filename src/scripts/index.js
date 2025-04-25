@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add click event listener to each nav link
   navLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
-      // Prevent default behavior
-      event.preventDefault();
 
       // Remove active class from all links
       navLinks.forEach((navLink) => navLink.classList.remove("active"));

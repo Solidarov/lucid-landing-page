@@ -12061,4 +12061,60 @@ textarea.form-control-lg {
   .text-container {
     width: 75%; /* Adjust the width as needed */
   }
+}
+/*=====Features section=====*/
+.heading {
+  position: relative;
+  display: inline-block;
+}
+
+.heading {
+  margin-bottom: 50px;
+}
+
+.heading span {
+  position: absolute;
+  bottom: -40px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(10%); /* Offset by half the width for perfect centering */
+  width: 8%;
+  height: 3px;
+  background-color: #008DD5;
+}
+
+.heading span:nth-child(2) {
+  position: absolute;
+  bottom: -40px; /* Same vertical alignment */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-110%); /* Offset by half the width*/
+  width: 8%;
+  height: 3px;
+  background-color: #008DD5;
+}
+
+.round-bordered-image {
+  width: 100px; /* Set a fixed width for the container */
+  height: 100px; /* Make the container square */
+  border: 1px solid #e5e5e5; /* Add a circular border */
+  border-radius: 50%; /* Make the border circular */
+  padding: 25px; /* Increase padding to ensure rectangular images fit within circle */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.round-bordered-image:hover {
+  border: 2px solid #008DD5;
+  transition: 0.1s;
+}
+
+.round-bordered-image img {
+  max-width: 120%;
+  max-height: 120%;
+  width: auto; /* Allow width to adjust based on height */
+  height: auto; /* Allow height to adjust based on width */
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
