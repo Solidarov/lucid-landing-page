@@ -27,9 +27,6 @@ $font-family-base: "Source Sans Pro", sans-serif;
 .lucid-theme {
   font-size: 65%; // Половина розміру LUCID
   text-transform: uppercase;
-}
-.lucid-theme,
-.lucid-onepage {
   margin-bottom: 0; // Відступ між Onepage і Theme
   margin-top: 0;
 }
@@ -55,20 +52,16 @@ $font-family-base: "Source Sans Pro", sans-serif;
 }
 
 .nav-item:hover a span,
-.collapse.show .nav-item:active a span {
-  transform: scaleX(1);
-}
-
+.collapse.show .nav-item:active a span,
 .nav-item .nav-link.active span {
   transform: scaleX(1);
 }
 
-
 /*=====Baner section=====*/
-.banner_section {
+ .banner_section {
     position: relative;
+    overflow: visible;
     z-index: 1;
-    background-color: $dark;
   }
 
   .banner_section::before {
@@ -76,9 +69,9 @@ $font-family-base: "Source Sans Pro", sans-serif;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/background_transparent.png');
+    background-image: url('../assets/background_transparent.png') ;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.3;
     z-index: -1;
   }
 
@@ -99,7 +92,6 @@ $font-family-base: "Source Sans Pro", sans-serif;
   }
 }
 
-/*=====Features section=====*/
 .heading {
   position: relative;
   display: inline-block;
@@ -149,7 +141,14 @@ $font-family-base: "Source Sans Pro", sans-serif;
 .round-bordered-image img {
   max-width: 120%;
   max-height: 120%;
-  width: auto; /* Allow width to adjust based on height */
-  height: auto; /* Allow height to adjust based on width */
+  width: auto; 
+  height: auto; 
   object-fit: contain;
+}
+@media (min-width: 1200px) {
+  #features {
+    position: relative;
+    margin-top: -100px; 
+    z-index: 2; /* Higher than banner_section's z-index of 1 */
+  }
 }

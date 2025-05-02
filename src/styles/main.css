@@ -11992,10 +11992,6 @@ textarea.form-control-lg {
 .lucid-theme {
   font-size: 65%;
   text-transform: uppercase;
-}
-
-.lucid-theme,
-.lucid-onepage {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -12022,10 +12018,7 @@ textarea.form-control-lg {
 }
 
 .nav-item:hover a span,
-.collapse.show .nav-item:active a span {
-  transform: scaleX(1);
-}
-
+.collapse.show .nav-item:active a span,
 .nav-item .nav-link.active span {
   transform: scaleX(1);
 }
@@ -12033,8 +12026,8 @@ textarea.form-control-lg {
 /*=====Baner section=====*/
 .banner_section {
   position: relative;
+  overflow: visible;
   z-index: 1;
-  background-color: #16151B;
 }
 
 .banner_section::before {
@@ -12044,7 +12037,7 @@ textarea.form-control-lg {
   height: 100%;
   background-image: url("../assets/background_transparent.png");
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -12062,7 +12055,6 @@ textarea.form-control-lg {
     width: 75%; /* Adjust the width as needed */
   }
 }
-/*=====Features section=====*/
 .heading {
   position: relative;
   display: inline-block;
@@ -12113,8 +12105,16 @@ textarea.form-control-lg {
 .round-bordered-image img {
   max-width: 120%;
   max-height: 120%;
-  width: auto; /* Allow width to adjust based on height */
-  height: auto; /* Allow height to adjust based on width */
+  width: auto;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+  #features {
+    position: relative;
+    margin-top: -100px;
+    z-index: 2; /* Higher than banner_section's z-index of 1 */
+  }
 }/*# sourceMappingURL=main.css.map */
