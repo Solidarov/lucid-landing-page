@@ -95,31 +95,31 @@ $font-family-base: "Source Sans Pro", sans-serif;
 .heading {
   position: relative;
   display: inline-block;
-}
-
-.heading{
   margin-bottom: 50px;
-}
-.heading span {
-  position: absolute;
-  bottom: -40px;
-  left: 50%; /* Center horizontally */
-  transform: translateX(10%); /* Offset by half the width for perfect centering */
-  width: 8%;
-  height: 3px;
-  background-color: $primary;
+
+   span {
+    position: absolute;
+    bottom: -40px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(10%); /* Offset by half the width for perfect centering */
+    width: 8%;
+    height: 3px;
+    background-color: $primary;
+  }
+
+  span:nth-child(2) {
+    position: absolute;
+    bottom: -40px; /* Same vertical alignment */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-110%); /* Offset by half the width*/ 
+    width: 8%;
+    height: 3px;
+    background-color: $primary; 
+  }
 }
 
-.heading span:nth-child(2) {
-  position: absolute;
-  bottom: -40px; /* Same vertical alignment */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-110%); /* Offset by half the width*/ 
-  width: 8%;
-  height: 3px;
-  background-color: $primary; 
-}
 
+/*=====Feature section=====*/
 .round-bordered-image {
   width: 100px; /* Set a fixed width for the container */
   height: 100px; /* Make the container square */
@@ -151,4 +151,25 @@ $font-family-base: "Source Sans Pro", sans-serif;
     margin-top: -100px; 
     z-index: 2; /* Higher than banner_section's z-index of 1 */
   }
+}
+
+
+/*=====About section=====*/
+.heading-about {
+  @extend .heading;
+  span{
+    left:10%;
+  }
+  span:nth-child(2){
+    left:10%;
+}
+}
+.about2-bg {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.icon-container {
+  width: 20px; 
+  height: 20px;
 }

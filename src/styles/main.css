@@ -12055,16 +12055,12 @@ textarea.form-control-lg {
     width: 75%; /* Adjust the width as needed */
   }
 }
-.heading {
+.heading, .heading-about {
   position: relative;
   display: inline-block;
-}
-
-.heading {
   margin-bottom: 50px;
 }
-
-.heading span {
+.heading span, .heading-about span {
   position: absolute;
   bottom: -40px;
   left: 50%; /* Center horizontally */
@@ -12073,8 +12069,7 @@ textarea.form-control-lg {
   height: 3px;
   background-color: #008DD5;
 }
-
-.heading span:nth-child(2) {
+.heading span:nth-child(2), .heading-about span:nth-child(2) {
   position: absolute;
   bottom: -40px; /* Same vertical alignment */
   left: 50%; /* Center horizontally */
@@ -12084,6 +12079,7 @@ textarea.form-control-lg {
   background-color: #008DD5;
 }
 
+/*=====Feature section=====*/
 .round-bordered-image {
   width: 100px; /* Set a fixed width for the container */
   height: 100px; /* Make the container square */
@@ -12117,4 +12113,21 @@ textarea.form-control-lg {
     margin-top: -100px;
     z-index: 2; /* Higher than banner_section's z-index of 1 */
   }
+}
+/*=====About section=====*/
+.heading-about span {
+  left: 10%;
+}
+.heading-about span:nth-child(2) {
+  left: 10%;
+}
+
+.about2-bg {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.icon-container {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=main.css.map */
