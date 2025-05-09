@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LUCID</title>
   <link href="./src/styles/main.css" rel="stylesheet">
+  <link href="./src/styles/swiper-bundle.min.css" rel="stylesheet">
+
   <script src="./src/scripts/index.js"></script>
   <script src="./src/scripts/bootstrap.bundle.min.js"></script>
+  <script src="./src/scripts/swiper-bundle.min.js"></script>
+  <script src="./src/scripts/sliders.js" defer></script>
 </head>
 <body>
 
@@ -35,7 +39,10 @@
               <a class="nav-link" href="#features">Features<span></span><span></span></a>
             </li>
             <li class="nav-item mx-1 my-2 my-lg-0">
-              <a class="nav-link" href="#about">Testimonials<span></span><span></span></a>
+              <a class="nav-link" href="#about">About<span></span><span></span></a>
+            </li>
+            <li class="nav-item mx-1 my-2 my-lg-0">
+              <a class="nav-link" href="#testemonials">Testimonials<span></span><span></span></a>
             </li>
             <li class="nav-item mx-1 my-2 my-lg-0">
                 <a class="nav-link" href="#">Pricing<span></span><span></span></a>
@@ -187,7 +194,7 @@
       </div>
     </div>
   </div>
-  <div class="about2-bg w-100 py-4 my-4">    
+  <div class="about2-bg w-100 py-4 mt-4">    
     <div class="container mt-5" id="about2">
       <div class="row align-items-center">
         <div class="col-12 col-lg-5">
@@ -210,6 +217,99 @@
         </div>
         <div class="col-12 col-lg-7">
           <img class="img-fluid float-start" src="./src/assets/phone_side.png" >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testemonials">
+  <div class="container pb-5">
+    <div class="row text-center pt-5">
+      <div class="col-12">
+        <p class="text-primary text-uppercase">
+          <b>quality has its price</b>
+        </p>
+        <h2 class="heading text-white">
+          <b>Pricing & Plans</b>
+          <span></span><span></span>
+        </h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        
+        <div class="swiper testemonials-slider py-5">
+          <div class="swiper-wrapper py-5">
+
+            <div class="swiper-slide">
+              <div class="testemonials-container">
+                <p class="testemonials-text">Once upon a time all the Rivers combined to protest egainst the action of the Sea in making their waters salt. "When we come to you," said the to the Sea.</p>
+                <div class="testemonials-credentials pt-4 pb-5">
+                  <img class="testemonials-image" src="./src/assets/john_doe_avatar.png">
+                  <div class="testemonials-info ">
+                    <p class="testemonials-name">John Doe</p>
+                    <p class="testemonials-position">ceo, the rivers company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testemonials-container">
+                <p class="testemonials-text">A shoe is not only a design, but it`s a part of your body language, the way you walk. The way you`re going to move is quite sictated by your shoes.</p>
+                <div class="testemonials-credentials pt-4 pb-5">
+                  <img class="testemonials-image" src="./src/assets/dean_winchester_avatar.png">
+                  <div class="testemonials-info ">
+                    <p class="testemonials-name">John Doe</p>
+                    <p class="testemonials-position">ceo, the rivers company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testemonials-container">
+                <p class="testemonials-text">Once upon a time all the Rivers combined to protest egainst the action of the Sea in making their waters salt. "When we come to you," said the to the Sea.</p>
+                <div class="testemonials-credentials pt-4 pb-5">
+                  <img class="testemonials-image" src="./src/assets/john_doe_avatar.png">
+                  <div class="testemonials-info ">
+                    <p class="testemonials-name">John Doe</p>
+                    <p class="testemonials-position">ceo, the rivers company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testemonials-container">
+                <p class="testemonials-text">A shoe is not only a design, but it`s a part of your body language, the way you walk. The way you`re going to move is quite sictated by your shoes.</p>
+                <div class="testemonials-credentials pt-4 pb-5">
+                  <img class="testemonials-image" src="./src/assets/dean_winchester_avatar.png">
+                  <div class="testemonials-info ">
+                    <p class="testemonials-name">John Doe</p>
+                    <p class="testemonials-position">ceo, the rivers company</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testemonials-pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-dark">
+  <div class="container py-4">
+    <div class="row text-white align-items-center">
+      <div class="col-xl-8 py-3 center-content-testemonials">
+        <h3><b>Like what you see?</b> Get this great theme now!</h3>
+      </div>
+      <div class="col-xl-4 py-3 center-content-testemonials">
+        <div>
+          <a class="btn btn-outline-light m-2 ms-0 rounded-1 border-1 text-uppercase" href="#">view features</a>
+          <a class="btn btn-primary m-2 ms-0 rounded-1 text-white text-uppercase" href="#">download now</a>
         </div>
       </div>
     </div>
