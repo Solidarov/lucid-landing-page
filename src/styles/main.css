@@ -12122,7 +12122,7 @@ textarea.form-control-lg {
   left: 10%;
 }
 
-.about2-bg {
+.gray-bg {
   background-color: #F2F2F2;
   width: 100%;
 }
@@ -12219,6 +12219,7 @@ textarea.form-control-lg {
   }
 }
 
+/*=====Pricing section=====*/
 .card:hover {
   transition: 0.1s;
 }
@@ -12251,4 +12252,58 @@ textarea.form-control-lg {
   font-size: 1em;
   position: relative;
   top: -0.5em;
+}
+
+/*=====Contact section=====*/
+.contact-body {
+  line-height: 0.8;
+  margin-top: 30px;
+}
+
+.contact-img {
+  width: 0.5;
+}
+
+.form-control {
+  background-color: transparent !important;
+  border: 2px solid #3C3B41 !important;
+  border-radius: 0.5;
+  color: #fff !important;
+}
+
+.form-control::-moz-placeholder {
+  color: #3C3B41 !important;
+}
+
+.form-control::placeholder {
+  color: #3C3B41 !important;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  border-color: #888;
+  box-shadow: none;
+}
+
+#contact .form-control {
+  height: 49px;
+  min-height: 49px;
+}
+
+#contact #message.form-control {
+  height: calc(147px + 2rem);
+  min-height: 144px;
+  resize: none;
+  display: block;
+}
+
+#contact-form {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+#contact-map {
+  position: relative;
+  margin-top: -75px;
 }/*# sourceMappingURL=main.css.map */
