@@ -25,10 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+          form.classList.add('was-validated');
         } else {
+          event.preventDefault();
           alert('Дякуємо за ваш відгук!');
+          form.reset();
+          form.classList.remove('was-validated');
         }
-        form.classList.add('was-validated');
       }, false);
     });
 });

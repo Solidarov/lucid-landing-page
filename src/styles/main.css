@@ -12306,4 +12306,19 @@ textarea.form-control-lg {
 #contact-map {
   position: relative;
   margin-top: -75px;
+}
+
+#footer {
+  position: relative;
+  margin-top: -7px;
+}
+
+#footer .nav-link svg {
+  color: #403F45;
+}
+
+#footer .nav-link svg :hover {
+  fill: #008DD5;
+  color: #008DD5;
+  transition: 0.1s;
 }/*# sourceMappingURL=main.css.map */

@@ -343,3 +343,17 @@ $font-family-base: "Source Sans Pro", sans-serif;
   position: relative;
   margin-top: -75px;
 }
+
+#footer{
+  position: relative;
+  margin-top: -7px;
+}
+#footer .nav-link svg{
+  color: #403F45;
+}
+
+#footer .nav-link svg :hover {
+  fill: $primary;
+  color: $primary;
+  transition: 0.1s;
+}
