@@ -1,0 +1,359 @@
+$primary: #008DD5;
+$secondary: #89888D;
+$dark: #16151B;
+$font-family-base: "Source Sans Pro", sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/*=====Logo section=====*/
+.lucid-logo {
+  display: flex;
+}
+
+.lucid-text {
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 3px; // Відступ між LUCID і підписами
+}
+
+.lucid-subtext {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.lucid-onepage,
+.lucid-theme {
+  font-size: 65%; // Половина розміру LUCID
+  text-transform: uppercase;
+  margin-bottom: 0; // Відступ між Onepage і Theme
+  margin-top: 0;
+}
+
+/*=====Menu section=====*/
+.nav-item a {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item a span {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 45%;
+  height: 3px;
+  background-color: $primary;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-item a span:nth-child(2) {
+  left: 50%;
+}
+
+.nav-item:hover a span,
+.collapse.show .nav-item:active a span,
+.nav-item .nav-link.active span {
+  transform: scaleX(1);
+}
+
+/*=====Baner section=====*/
+ .banner_section {
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .banner_section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/background_transparent.png') ;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+
+
+@media (max-width: 992px) {
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .text-container {
+    width: 75%; /* Adjust the width as needed */
+  }
+}
+
+.heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+
+   span {
+    position: absolute;
+    bottom: -40px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(10%); /* Offset by half the width for perfect centering */
+    width: 8%;
+    height: 3px;
+    background-color: $primary;
+  }
+
+  span:nth-child(2) {
+    position: absolute;
+    bottom: -40px; /* Same vertical alignment */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-110%); /* Offset by half the width*/ 
+    width: 8%;
+    height: 3px;
+    background-color: $primary; 
+  }
+}
+
+
+/*=====Feature section=====*/
+.round-bordered-image {
+  width: 100px; /* Set a fixed width for the container */
+  height: 100px; /* Make the container square */
+  border: 1px solid #e5e5e5; /* Add a circular border */
+  border-radius: 50%; /* Make the border circular */
+  padding: 25px; /* Increase padding to ensure rectangular images fit within circle */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.round-bordered-image:hover {
+  border: 2px solid $primary;
+  transition: 0.1s;
+}
+
+.round-bordered-image img {
+  max-width: 120%;
+  max-height: 120%;
+  width: auto; 
+  height: auto; 
+  object-fit: contain;
+}
+@media (min-width: 1200px) {
+  #features {
+    position: relative;
+    margin-top: -100px; 
+    z-index: 2; /* Higher than banner_section's z-index of 1 */
+  }
+}
+
+
+/*=====About section=====*/
+.heading-about {
+  @extend .heading;
+  span{
+    left:10%;
+  }
+  span:nth-child(2){
+    left:10%;
+}
+}
+.gray-bg {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.icon-container {
+  width: 20px; 
+  height: 20px;
+}
+
+
+/*=====About section=====*/
+#testemonials {
+  position: relative;
+  background-color: $dark;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/background_blur.png");
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+.swiper-slide {
+  width: fit-content;
+}
+
+.testemonials-text {
+  color: white;
+  font-size:1.4em;
+  font-style: italic;
+  min-height: 110px;
+  max-height: 140px;
+}
+@media (max-width: 993px) {
+  .testemonials-text {
+    min-height: 200px;
+  }
+}
+@media (max-width: 769px){
+  .testemonials-text {
+    min-height: 90px;
+  }
+}
+
+
+.testemonials-image {
+  border-radius: 50%;
+  margin-right: 20px;
+  height: 59px;
+  width: auto;
+}
+.testemonials-info {
+  position: absolute;
+  color: white;
+  display:inline-block;
+  
+  
+  .testemonials-name {
+    margin-bottom: 0.5em;
+  }
+  .testemonials-position{
+    margin-bottom: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin: 0 6px;
+  display: inline-block;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  background-color: white;
+  border-color: white;
+}
+
+
+.center-content-testemonials{
+  @media(max-width: 1201px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*=====Pricing section=====*/
+.card:hover {
+  transition: 0.1s;
+  .price{
+    background-color: $primary;
+    color: white;
+  }
+  .card-title {
+    color: $primary;
+  }
+  .btn {
+    background-color: $primary;
+    color: white;
+  }
+}
+.small-text-button {
+  font-size: 0.85em;
+  padding: 0.75rem 2.5rem;
+}
+.dollar-sign{
+  font-size: 0.5em;
+  top: -1em;
+  left: 0.1em;
+  position: relative;
+  font-weight: bold;
+}
+.per-month{
+  font-size: 1em;
+  position: relative;
+  top: -0.5em;
+}
+
+
+/*=====Contact section=====*/
+.contact-body{
+  line-height: 0.8;
+  margin-top: 30px;
+}
+.contact-img{
+  width: 1* 0.5;
+}
+
+.form-control {
+  background-color: transparent !important;
+  border: 2px solid #3C3B41 !important; // light gray
+  border-radius: 0.5;
+  color: #fff !important; // or your preferred text color
+}
+.form-control::placeholder{
+  color: #3C3B41 !important;
+}
+.form-control:focus {
+  background-color: transparent;
+  border-color: #888; // darker gray on focus
+  box-shadow: none;
+}
+
+
+#contact .form-control {
+  height: 49px;         // Set input height
+  min-height: 49px;
+}
+
+#contact #message.form-control {
+  height: calc(49px * 3 + 2rem); // 3 inputs + 2rem for vertical margins (adjust as needed)
+  min-height: 144px;
+  resize: none;
+  display: block;
+}
+#contact-form{
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+#contact-map{
+  position: relative;
+  margin-top: -75px;
+}
+
+#footer{
+  position: relative;
+  margin-top: -7px;
+}
+#footer .nav-link svg{
+  color: #403F45;
+}
+
+#footer .nav-link svg :hover {
+  fill: $primary;
+  color: $primary;
+  transition: 0.1s;
+}

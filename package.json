@@ -1,0 +1,22 @@
+{
+  "name": "lucid-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-deps": "gulp --gulpfile ./src/scripts/gulpfile.js",
+    "sass:watch": "sass --watch src/styles:src/styles --quiet-deps",
+    "sass:compile": "sass src/styles:src/styles --no-source-map --quiet-deps"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "swiper": "^11.2.6"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "sass": "^1.87.0"
+  }
+}
