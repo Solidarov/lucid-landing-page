@@ -7,6 +7,8 @@ This is the repository for "Lucid," a clean, modern, and fully responsive onepag
 You can view the live version of the site at this link:
 **[https://solidarov.github.io/lucid-landing-page/](https://solidarov.github.io/lucid-landing-page/)**
 
+![Main Banner](./src/assets/demo/LUCID.png)
+
 
 ## 🚀 Features
 
