@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy-deps": "gulp --gulpfile ./src/scripts/gulpfile.js",
-    "sass:watch": "sass --watch src/styles:src/styles --quiet-deps"
+    "sass:watch": "sass --watch src/styles:src/styles --quiet-deps",
+    "sass:compile": "sass src/styles:src/styles --no-source-map --quiet-deps"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "gulp": "^5.0.0"
+    "gulp": "^5.0.0",
+    "sass": "^1.87.0"
   }
 }
