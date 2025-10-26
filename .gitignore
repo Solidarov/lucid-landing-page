@@ -184,7 +184,7 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node,sass,visualstudiocode,linux
 
 # ignore vendors file
-src/scripts/bootstrap*.js
-src/scripts/swiper*.js
-src/styles/swiper*.css
-src/styles/main.css
+# src/scripts/bootstrap*.js
+# src/scripts/swiper*.js
+# src/styles/swiper*.css
+# src/styles/main.css
